@@ -1,42 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Astra Docs</title>
-    <link rel="stylesheet" href="/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astra Documentation</title>
+  <link rel="stylesheet" href="/astra.github.io/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin-right: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: radial-gradient(circle at top, #1f1f1f, #0f0f0f);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .doc-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      padding: 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      transition: border 0.2s ease;
+    }
+
+    .doc-card:hover {
+      border: 1px solid #00bfff;
+    }
+
+    .doc-card h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .doc-card p {
+      color: #aaa;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/docs/">Docs</a>
-        <a href="/dashboard/">Dashboard</a>
+  <header>
+    <nav>
+      <a href="/astra.github.io/">Home</a>
+      <a href="/astra.github.io/docs/">Docs</a>
+      <a href="/astra.github.io/dashboard/">Dashboard</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
+  <section class="hero">
     <h1>Astra Documentation</h1>
     <p>Your complete guide to using and configuring Astra.</p>
-</section>
+  </section>
 
-<section class="docs-grid">
-    <a class="doc-card" href="/docs/getting-started.html">
-        <h2>Getting Started</h2>
-        <p>Invite Astra and set up your server in minutes.</p>
+  <section class="docs-grid">
+    <a class="doc-card" href="/astra.github.io/docs/getting-started.html">
+      <h2>Getting Started</h2>
+      <p>Invite Astra and set up your server in minutes.</p>
     </a>
 
-    <a class="doc-card" href="/docs/commands.html">
-        <h2>Commands</h2>
-        <p>Full list of commands with examples and permissions.</p>
+    <a class="doc-card" href="/astra.github.io/docs/commands.html">
+      <h2>Commands</h2>
+      <p>Full list of commands with examples and permissions.</p>
     </a>
 
-    <a class="doc-card" href="/docs/faq.html">
-        <h2>FAQ</h2>
-        <p>Common questions and quick fixes.</p>
+    <a class="doc-card" href="/astra.github.io/docs/faq.html">
+      <h2>FAQ</h2>
+      <p>Common questions and quick fixes.</p>
     </a>
-</section>
+  </section>
 
 </body>
 </html>
