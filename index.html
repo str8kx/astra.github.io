@@ -14,9 +14,27 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(ellipse at top, #0f3d2e, #000);
+      background-color: #000;
       color: #e0f2f1;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated starfield background */
+    .stars {
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      animation: moveStars 60s linear infinite;
+      z-index: -3;
+      top: -50%;
+      left: -50%;
+    }
+
+    @keyframes moveStars {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50%, 50%); }
     }
 
     header {
@@ -41,7 +59,6 @@
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
     }
 
     .hero h1 {
@@ -91,6 +108,7 @@
       padding: 1.5rem;
       width: 300px;
       color: #d1fae5;
+      font-size: 1rem;
     }
 
     footer {
@@ -102,6 +120,8 @@
   </style>
 </head>
 <body>
+  <div class="stars"></div>
+
   <header>
     <div><strong>Astra</strong></div>
     <nav>
@@ -126,9 +146,9 @@
 
   <section class="features">
     <div class="feature-box">✅ Add Astra to your server</div>
-    <div class="feature-box">🎨 Customize commands and roles</div>
+    <div class="feature-box">🍭 Customize commands and roles</div>
     <div class="feature-box">📊 Analytics and moderation tools</div>
-    <div class="feature-box">🛠️ Developer-friendly API access</div>
+    <div class="feature-box">🧑‍💻 Developer-friendly API access</div>
     <div class="feature-box">🌙 Read you a bedtime story</div>
     <div class="feature-box">🔒 Secure permission management</div>
   </section>
