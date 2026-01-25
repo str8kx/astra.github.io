@@ -20,53 +20,45 @@
       position: relative;
     }
 
-    /* Animated starfield background */
-    .stars {
+    /* Parallax star layers */
+    .stars1, .stars2, .stars3 {
       position: fixed;
-      width: 200%;
-      height: 200%;
+      width: 300%;
+      height: 300%;
       background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-      animation: moveStars 60s linear infinite;
       z-index: -3;
-      top: -50%;
-      left: -50%;
+      top: -100%;
+      left: -100%;
     }
 
-    @keyframes moveStars {
+    .stars1 {
+      animation: moveStars1 120s linear infinite;
+      opacity: 0.2;
+    }
+
+    .stars2 {
+      animation: moveStars2 180s linear infinite;
+      opacity: 0.3;
+    }
+
+    .stars3 {
+      animation: moveStars3 240s linear infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes moveStars1 {
       0% { transform: translate(0, 0); }
-      100% { transform: translate(50%, 50%); }
+      100% { transform: translate(300px, 300px); }
     }
 
-    /* Shooting stars */
-    .shooting-star {
-      position: fixed;
-      top: -10px;
-      width: 2px;
-      height: 80px;
-      background: linear-gradient(180deg, #a7f3d0, transparent);
-      opacity: 0.8;
-      transform: rotate(45deg);
-      animation: shoot 3s linear infinite;
-      z-index: -2;
+    @keyframes moveStars2 {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(600px, 600px); }
     }
 
-    /* Duplicate stars with delays */
-    .shooting-star:nth-child(2) { left: 20%; animation-delay: 1s; }
-    .shooting-star:nth-child(3) { left: 60%; animation-delay: 2s; }
-    .shooting-star:nth-child(4) { left: 80%; animation-delay: 3s; }
-
-    @keyframes shoot {
-      0% {
-        transform: translate(0, 0) rotate(45deg);
-        opacity: 1;
-      }
-      70% {
-        opacity: 1;
-      }
-      100% {
-        transform: translate(600px, 600px) rotate(45deg);
-        opacity: 0;
-      }
+    @keyframes moveStars3 {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(900px, 900px); }
     }
 
     header {
@@ -74,8 +66,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: rgba(0, 50, 30, 0.8);
-      backdrop-filter: blur(10px);
+      background-color: #000;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -83,7 +74,7 @@
 
     nav a {
       margin: 0 1rem;
-      color: #a7f3d0;
+      color: #22c55e;
       text-decoration: none;
       font-weight: 500;
     }
@@ -96,7 +87,8 @@
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #a7f3d0;
+      color: #22c55e;
+      text-shadow: 0 0 10px #22c55e;
     }
 
     .hero p {
@@ -118,6 +110,7 @@
       color: #e0f2f1;
       text-decoration: none;
       font-weight: bold;
+      box-shadow: 0 0 10px #22c55e;
       transition: background 0.3s ease;
     }
 
@@ -141,29 +134,27 @@
       width: 300px;
       color: #d1fae5;
       font-size: 1rem;
+      box-shadow: 0 0 6px #22c55e;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #012a1f;
-      color: #a7f3d0;
+      background-color: #000;
+      color: #22c55e;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="stars"></div>
-
-  <!-- Shooting stars -->
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
+  <!-- Parallax star layers -->
+  <div class="stars1"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
 
   <header>
-    <div><strong>Astra</strong></div>
+    <div><strong style="color:#22c55e;">Astra</strong></div>
     <nav>
       <a href="#">Home</a>
       <a href="#">Applications</a>
@@ -186,9 +177,9 @@
 
   <section class="features">
     <div class="feature-box">✅ Add Astra to your server</div>
-    <div class="feature-box">🍭 Customize commands and roles</div>
+    <div class="feature-box">🔍 Customize commands and roles</div>
     <div class="feature-box">📊 Analytics and moderation tools</div>
-    <div class="feature-box">🧑‍💻 Developer-friendly API access</div>
+    <div class="feature-box">👨‍💻 Developer-friendly API access</div>
     <div class="feature-box">🌙 Read you a bedtime story</div>
     <div class="feature-box">🔒 Secure permission management</div>
   </section>
