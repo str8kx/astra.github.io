@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra Dashboard</title>
+  <style>
+    body { margin:0; background:#0f0f0f; color:#fff; font-family:'Segoe UI',sans-serif; }
+    header { background:#1a1a1a; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+    nav a { color:#fff; margin-right:1.5rem; text-decoration:none; }
+    nav a:hover { color:#00bfff; }
+    .container { max-width:1200px; margin:2rem auto; padding:2rem; }
+    .card { background:#1a1a1a; border:1px solid #333; padding:2rem; border-radius:8px; margin-bottom:2rem; }
+    .toggle { display:flex; justify-content:space-between; margin:1rem 0; }
+    .toggle input { transform:scale(1.5); }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/astra.github.io/">Home</a>
+    <a href="/astra.github.io/applications/">Applications</a>
+    <a href="/astra.github.io/docs/">Docs</a>
+    <a href="/astra.github.io/premium/">Premium</a>
+    <a href="/astra.github.io/status/">Status</a>
+  </nav>
+  <a href="/astra.github.io/login/">Logout</a>
+</header>
+
+<div class="container">
+  <h1>Dashboard</h1>
+  <p>Welcome back! Choose a module to configure.</p>
+
+  <div class="card">
+    <h2>Moderation</h2>
+    <div class="toggle">
+      <span>Enable Moderation</span>
+      <input type="checkbox" id="mod-enabled">
+    </div>
+    <div class="toggle">
+      <span>Auto Timeout</span>
+      <input type="checkbox" id="auto-timeout">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Tickets</h2>
+    <div class="toggle">
+      <span>Enable Tickets</span>
+      <input type="checkbox" id="tickets-enabled">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Music</h2>
+    <div class="toggle">
+      <span>Enable Music</span>
+      <input type="checkbox" id="music-enabled">
+    </div>
+  </div>
+</div>
+
+<script>
+  const settings = ["mod-enabled", "auto-timeout", "tickets-enabled", "music-enabled"];
+
+  settings.forEach(id => {
+    const el = document.getElementById(id);
+    const saved = localStorage.getItem(id);
+    if (saved === "true") el.checked = true;
+
+    el.addEventListener("change", () => {
+      localStorage.setItem(id, el.checked);
+    });
+  });
+</script>
+
+</body>
+</html>
