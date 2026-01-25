@@ -1,39 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bot Name</title>
+  <meta charset="UTF-8" />
+  <title>Astra — All-in-One Discord Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      background: #0b0f0c;
-      color: #d4ffd9;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px;
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a {
-      color: #00ff88;
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(ellipse at top, #0f3d2e, #000);
+      color: #e0f2f1;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 50, 30, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #a7f3d0;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #a7f3d0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #d1fae5;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .buttons a {
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      background-color: #065f46;
+      color: #e0f2f1;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
-    .box {
-      max-width: 600px;
-      margin: auto;
-      background: #111a14;
-      padding: 30px;
-      border-radius: 12px;
+
+    .buttons a:hover {
+      background-color: #047857;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 4rem 2rem;
+      gap: 2rem;
+    }
+
+    .feature-box {
+      background-color: rgba(0, 50, 30, 0.6);
+      border: 1px solid #064e3b;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 300px;
+      color: #d1fae5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #012a1f;
+      color: #a7f3d0;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Bot Name</h1>
-    <p>A secure Discord verification & utility bot.</p>
-    <p>
-      <a href="#">Invite Bot</a> ·
-      <a href="privacy.html">Privacy Policy</a> ·
-      <a href="tos.html">Terms of Service</a>
-    </p>
-  </div>
+  <header>
+    <div><strong>Astra</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Applications</a>
+      <a href="#">Bot</a>
+      <a href="#">Docs</a>
+      <a href="#">Premium</a>
+      <a href="#">Status</a>
+      <a href="#">Log In</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Astra</h1>
+    <p>All-in-One Discord Bot</p>
+    <div class="buttons">
+      <a href="#">+ Invite</a>
+      <a href="#">? Support</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">✅ Add Astra to your server</div>
+    <div class="feature-box">🎨 Customize commands and roles</div>
+    <div class="feature-box">📊 Analytics and moderation tools</div>
+    <div class="feature-box">🛠️ Developer-friendly API access</div>
+    <div class="feature-box">🌙 Read you a bedtime story</div>
+    <div class="feature-box">🔒 Secure permission management</div>
+  </section>
+
+  <footer>
+    &copy; 2026 Astra Bot. All rights reserved.
+  </footer>
 </body>
 </html>
